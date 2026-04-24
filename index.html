@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>متوسطة مرخوفي حسين | اتصل بنا</title>
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<header class="top">
+  <div class="logo">
+    <svg class="logo-svg" viewBox="0 0 100 100">
+      <text x="50%" y="65%" text-anchor="middle" font-size="60"
+        font-family="Segoe Script, cursive" fill="#a12c4a">M</text>
+    </svg>
+    <div class="school">
+      <h1>متوسطة مرخوفي حسين</h1>
+      <span>Merkhofi Hussein Middle School</span>
+    </div>
+  </div>
+  <div class="email-display">taibilena8@gmail.com</div>
+</header>
+
+<main class="container">
+  <section class="card">
+    <h2>📩 اتصل بنا | Contact Us</h2>
+    <p>يسعدنا تواصلكم معنا لأي استفسار أو ملاحظة عامة</p>
+    <form id="contact-form">
+      <input type="text" name="from_name" placeholder="الاسم الكامل" required>
+      <input type="email" name="reply_to" placeholder="البريد الإلكتروني" required>
+      <input type="text" name="subject" placeholder="الموضوع">
+      <textarea name="message" placeholder="رسالتك هنا..." required></textarea>
+      <button type="submit" id="contact-btn">إرسال الرسالة</button>
+    </form>
+    <p id="contact-status" class="status-msg"></p>
+  </section>
+
+  <section class="card private-section">
+    <h2>📋 طلب الشهادة الطبية</h2>
+    <p class="warning-text">حفاظاً على خصوصية التلاميذ، يرجى ملء البيانات بدقة. سيتم مراجعة الطلب وإرسال الشهادة عبر بريدك الإلكتروني.</p>
+    <form id="request-form">
+      <div class="input-group">
+        <label>اسم التلميذ الكامل:</label>
+        <input type="text" name="student_name" placeholder="كما هو مسجل في المدرسة" required>
+      </div>
+      <div class="input-group">
+        <label>تاريخ ميلاد التلميذ:</label>
+        <input type="date" name="birth_date" required>
+      </div>
+      <div class="input-group">
+        <label>بريد الولي الإلكتروني:</label>
+        <input type="email" name="parent_email" placeholder="ليتم إرسال الشهادة إليه" required>
+      </div>
+      <button type="submit" id="request-btn">إرسال طلب الشهادة</button>
+    </form>
+    <p id="request-status" class="status-msg"></p>
+  </section>
+</main>
+
+<footer>
+  <p>© 2026 جميع الحقوق محفوظة لمتوسطة مرخوفي حسين</p>
+  <div class="icons">
+    <a href="https://www.facebook.com/profile.php?id=61572767962501" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook">
+    </a>
+    <a href="https://maps.google.com" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/69/69524.png" alt="Location">
+    </a>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
