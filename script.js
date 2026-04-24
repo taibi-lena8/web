@@ -1,11 +1,10 @@
 (function() {
-    // المفتاح العام الخاص بك (ثابت)
     emailjs.init("rI-X_67czvTjPDZjh");
 })();
 
-// المعرفات الجديدة الخاصة بك
-const myServiceId = "service_i0kgqwm"; // تم التحديث هنا
-const myTemplateId = "template_r11up8c"; 
+// المعرفات النهائية المحدثة
+const myServiceId = "service_i0kgqwm"; 
+const myTemplateId = "template_9ylx4wo"; 
 
 function handleFormSubmission(formId, btnId, statusId, serviceId, templateId) {
     const form = document.getElementById(formId);
@@ -23,14 +22,12 @@ function handleFormSubmission(formId, btnId, statusId, serviceId, templateId) {
         emailjs.sendForm(serviceId, templateId, this)
             .then(() => {
                 status.innerText = "✅ تم الإرسال بنجاح! سنرد عليكم قريباً.";
-                status.className = "status-msg success";
-                status.style.color = "#27ae60"; // لون أخضر للنجاح
+                status.style.color = "#27ae60";
                 form.reset();
             })
             .catch((error) => {
-                status.innerText = "❌ فشل الإرسال، يرجى التأكد من وجود القالب في EmailJS.";
-                status.className = "status-msg error";
-                status.style.color = "#c0392b"; // لون أحمر للفشل
+                status.innerText = "❌ فشل الإرسال، تحقق من إعدادات القالب.";
+                status.style.color = "#c0392b";
                 console.error("EmailJS Error:", error);
             })
             .finally(() => {
@@ -40,6 +37,6 @@ function handleFormSubmission(formId, btnId, statusId, serviceId, templateId) {
     });
 }
 
-// تفعيل النماذج بالمعرف الجديد
+// تفعيل النماذج
 handleFormSubmission("contact-form", "contact-btn", "contact-status", myServiceId, myTemplateId);
 handleFormSubmission("request-form", "request-btn", "request-status", myServiceId, myTemplateId);
